@@ -1,4 +1,4 @@
-project(STM32_HAL_Thing C ASM)
+project(STM32F103_HAL_Skeleton C ASM)
 cmake_minimum_required(VERSION 3.8.2)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
