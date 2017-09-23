@@ -1,0 +1,25 @@
+D:\Users\rwilf\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\172.3968.17\bin\cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Users\rwilf\Dev\STM32\Whatcha
+-- The C compiler identification is GNU 7.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: D:/MinGW/bin/gcc.exe
+-- Check for working C compiler: D:/MinGW/bin/gcc.exe
+-- Check for working C compiler: D:/MinGW/bin/gcc.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+CMake Error at CMakeLists.txt:9 (add_library):
+  Cannot find source file:
+
+    Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+
+
+CMake Error: Cannot determine link language for target "CMSIS".
+CMake Error: CMake can not determine linker language for target: CMSIS
+-- Generating done
+-- Build files have been written to: D:/Users/rwilf/Dev/STM32/Whatcha/cmake-build-debug
+Unable to determine product file path for target CMSIS (Debug). Running and debugging will be unavailable.
