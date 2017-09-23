@@ -4,6 +4,7 @@
   <component name="CidrRootsConfiguration">
     <sourceRoots>
       <file path="$PROJECT_DIR$/CMSIS" />
+      <file path="$PROJECT_DIR$/HAL" />
       <file path="$PROJECT_DIR$/Inc" />
       <file path="$PROJECT_DIR$/Src" />
     </sourceRoots>
