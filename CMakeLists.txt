@@ -7,7 +7,7 @@ set(STM32CUBE_PATH D:/Users/rwilf/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.0/)
 add_definitions(-DSTM32F103xB)
 add_definitions(-DUSE_HAL_DRIVER)
 
-file(GLOB_RECURSE USER_SOURCES "Src/*.c")
+file(GLOB_RECURSE USER_SOURCES "Src/*.c" "startup/startup_stm32f103xb.s")
 #message("* * * * * USER_SOURCES:")
 #foreach(src ${USER_SOURCES})
 #    message(${src})
@@ -27,8 +27,7 @@ include_directories(${STM32CUBE_PATH}Drivers/CMSIS/Device/ST/STM32F1xx/Include)
 include_directories(${STM32CUBE_PATH}Drivers/CMSIS/Include)
 
 add_library(CMSIS
-        CMSIS/system_stm32f1xx.c
-        CMSIS/startup_stm32f103xb.s)
+        CMSIS/system_stm32f1xx.c)
 
 add_library(HAL
         HAL/stm32f1xx_hal_msp.c
