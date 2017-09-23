@@ -1,19 +1,32 @@
 project(f1_blink C ASM)
-cmake_minimum_required(VERSION 3.5.0)
+cmake_minimum_required(VERSION 3.8.2)
 
-add_definitions(-DSTM32F103x6)
+add_definitions(-DSTM32F103xB)
 
 file(GLOB_RECURSE USER_SOURCES "Src/*.c")
-file(GLOB_RECURSE HAL_SOURCES "Drivers/STM32F1xx_HAL_Driver/Src/*.c")
+message("* * * * * USER_SOURCES:")
+foreach(src ${USER_SOURCES})
+    message(${src})
+endforeach()
+
+set(STM32CUBE_PATH D:/Users/rwilf/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.0/)
+
+file(GLOB_RECURSE HAL_SOURCES "${STM32CUBE_PATH}Drivers/STM32F1xx_HAL_Driver/Src/*.c")
+message("* * * * * HAL_SOURCES:")
+foreach(src ${HAL_SOURCES})
+    message(${src})
+endforeach()
 
 add_library(CMSIS
-Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
-Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xb.s)
+    CMSIS/system_stm32f1xx.c
+    CMSIS/startup_stm32f103xb.s)
 
 include_directories(Inc)
-include_directories(Drivers/STM32F1xx_HAL_Driver/Inc)
-include_directories(Drivers/CMSIS/Include)
-include_directories(Drivers/CMSIS/Device/ST/STM32F1xx/Include)
+include_directories(${STM32CUBE_PATH}Drivers/STM32F1xx_HAL_Driver/Inc)
+include_directories(${STM32CUBE_PATH}Drivers/STM32F1xx_HAL_Driver/Inc/Legacy)
+include_directories(${STM32CUBE_PATH}Drivers/Include)
+include_directories(${STM32CUBE_PATH}Drivers/CMSIS/Device/ST/STM32F1xx/Include)
+include_directories(${STM32CUBE_PATH}Drivers/CMSIS/Include)
 
 add_executable(${PROJECT_NAME}.elf ${USER_SOURCES} ${HAL_SOURCES} ${LINKER_SCRIPT})
 

@@ -1,4 +1,0 @@
-D:/Users/rwilf/Dev/STM32/Whatcha/cmake-build-debug/CMakeFiles/f1_blink.elf.dir
-D:/Users/rwilf/Dev/STM32/Whatcha/cmake-build-debug/CMakeFiles/CMSIS.dir
-D:/Users/rwilf/Dev/STM32/Whatcha/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Users/rwilf/Dev/STM32/Whatcha/cmake-build-debug/CMakeFiles/rebuild_cache.dir
