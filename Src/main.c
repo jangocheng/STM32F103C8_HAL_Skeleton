@@ -52,6 +52,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -86,9 +87,17 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
+  MX_GPIO_Init();
 
   /* USER CODE BEGIN 2 */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+  GPIO_InitTypeDef gpioInitTypeDef;
+  gpioInitTypeDef.Mode = GPIO_MODE_OUTPUT_PP;
+  gpioInitTypeDef.Pin = GPIO_PIN_13;
+  gpioInitTypeDef.Pull = GPIO_PULLUP;
+  gpioInitTypeDef.Speed = GPIO_SPEED_FREQ_LOW;
 
+  HAL_GPIO_Init(GPIOC, &gpioInitTypeDef);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -98,7 +107,15 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
+    static u_int8_t toggleCounter = 0;
 
+    for (int32_t x = 0; x < 100000; x++) {
+      // do nothing loop
+    }
+
+    if (toggleCounter++ % 8) {
+      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+    }
   }
   /* USER CODE END 3 */
 
@@ -147,6 +164,21 @@ void SystemClock_Config(void)
 
   /* SysTick_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
+}
+
+/** Configure pins as 
+        * Analog 
+        * Input 
+        * Output
+        * EVENT_OUT
+        * EXTI
+*/
+static void MX_GPIO_Init(void)
+{
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+
 }
 
 /* USER CODE BEGIN 4 */

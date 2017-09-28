@@ -14,7 +14,7 @@
 9) Move Src/stm32f1xx_hal_msp.c to HAL/stm32f1xx_hal_msp.c (overwrite the old version Depending on your needs, you might want to merge instead)
 10) Move Src/system_stm32f1xx.c to CMSIS/system_stm32f1xx.c (overwrite the old version, Depending on your needs, you might want to merge instead)
 
-##You are now ready to open the project in CLion
+## You are now ready to open the project in CLion
 1) If you want a completely clean environment, delete the .idea folder
 2) Open the project folder in CLion
 3) Tell it to ignore the fact that some files are outside the project folder (It's by design)

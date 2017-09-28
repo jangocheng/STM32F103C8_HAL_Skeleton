@@ -27,10 +27,10 @@ include_directories(${STM32CUBE_PATH}Drivers/CMSIS/Device/ST/STM32F1xx/Include)
 include_directories(${STM32CUBE_PATH}Drivers/CMSIS/Include)
 
 add_library(CMSIS
-        CMSIS/system_stm32f1xx.c)
+        Src/system_stm32f1xx.c)
 
 add_library(HAL
-        HAL/stm32f1xx_hal_msp.c
+        Src/stm32f1xx_hal_msp.c
         ${HAL_SOURCES})
 
 SET(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8Tx_FLASH.ld)
