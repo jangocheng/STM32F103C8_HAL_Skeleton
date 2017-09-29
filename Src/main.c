@@ -38,6 +38,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f1xx_hal.h"
+#include "arm_math.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -63,6 +64,7 @@ static void MX_GPIO_Init(void);
 
 /* USER CODE END 0 */
 
+float32_t myFloat = 1.0f;
 int main(void)
 {
 
@@ -107,6 +109,7 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
+
     static u_int8_t toggleCounter = 0;
 
     for (int32_t x = 0; x < 100000; x++) {
@@ -115,6 +118,10 @@ int main(void)
 
     if (toggleCounter++ % 8) {
       HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+        myFloat += (5.0);
+    }
+      else {
+        myFloat -= (5.0);
     }
   }
   /* USER CODE END 3 */

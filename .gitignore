@@ -1,1 +1,8 @@
 cmake-build-*/**
+Drivers/**
+
+# files that STM32Cube likes to leave around  :)
+.cproject
+.mxproject
+.project
+STM32F103C8_HAL_Skeleton.xml
