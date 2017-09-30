@@ -40,6 +40,7 @@ then use the 30-day trial, or use the free EAP ([Early Access Program](https://w
 1. From the menu, go to: File -> Settings -> Build, Execution, Deployment -> CMake
 1. In "CMake options" type: -DCMAKE_TOOLCHAIN_FILE=stm32f103.cmake
 1. Click OK
+1. Set your project name in the project() command at the top of CMakeLists.txt
 1. Verify/set the "*** IMPORTANT ***" setting in CMakeLists.txt
 1. Set the TOOLCHAIN_PATH in stm32f103.cmake (It WILL be wrong for your environment!!!)  
 1. Open the CMake view (at the bottom left)
