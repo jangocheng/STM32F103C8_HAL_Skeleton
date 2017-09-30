@@ -1,7 +1,6 @@
 SET(CMAKE_SYSTEM_NAME Generic)
 SET(CMAKE_SYSTEM_VERSION 1)
 
-# specify the cross compiler
 set(TOOLCHAIN_PATH D:/GNU/ARM/bin/)
 set(CMAKE_C_COMPILER ${TOOLCHAIN_PATH}arm-none-eabi-gcc.exe)
 set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PATH}arm-none-eabi-g++.exe GNU)
