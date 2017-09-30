@@ -1,5 +1,6 @@
 cmake-build-*/**
 Drivers/**
+.idea/**
 
 # files that STM32Cube likes to leave around  :)
 .cproject
