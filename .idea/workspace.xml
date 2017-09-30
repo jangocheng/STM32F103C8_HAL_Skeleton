@@ -2,9 +2,9 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="STM32F103_HAL_Skeleton" targetName="CMSIS" />
-      <config projectName="STM32F103_HAL_Skeleton" targetName="HAL" />
       <config projectName="STM32F103_HAL_Skeleton" targetName="STM32F103_HAL_Skeleton.elf" />
+      <config projectName="STM32F103_HAL_Skeleton" targetName="HAL" />
+      <config projectName="STM32F103_HAL_Skeleton" targetName="CMSIS" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -15,7 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99caa0cf-4fd2-4eac-a2b3-7ea334a46f0a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/main.c" afterPath="$PROJECT_DIR$/Src/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -31,7 +31,18 @@
     <favorites_list name="STM32F103_HAL_Skeleton" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Src/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -58,8 +69,8 @@
         <option value="$PROJECT_DIR$/Drivers/CMSIS/Include/arm_math.h" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Src/main.c" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Src/main.c" />
       </list>
     </option>
   </component>
@@ -116,6 +127,11 @@
             <path>
               <item name="STM32F103_HAL_Skeleton" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="STM32F103C8_HAL_Skeleton" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="STM32F103_HAL_Skeleton" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="STM32F103C8_HAL_Skeleton" type="462c0819:PsiDirectoryNode" />
               <item name="Inc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -135,9 +151,15 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
     <property name="SearchEverywhereHistoryKey" value="stm32f1xx.h&#9;FILE&#9;file://D:/Users/rwilf/Dev/STM32/STM32F103C8_HAL_Skeleton/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h&#10;stm32f1xx_hal_msp&#9;FILE&#9;file://D:/Users/rwilf/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_msp_template.c" />
+    <property name="last_opened_file_path" value="C:/Program Files/PuTTY/putty.exe" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -157,18 +179,24 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.STM32F103_HAL_Skeleton.elf (debug)">
-    <configuration name="Arm GDB 3333" type="CLion_Remote" factoryName="GDB Remote Debug" singleton="true" debugger="D:/GNU/ARM/bin/arm-none-eabi-gdb.exe" remoteCommand="tcp:localhost:3333" symbolFile="$PROJECT_DIR$/cmake-build-debug/STM32F103_HAL_Skeleton.elf" sysroot="" />
-    <configuration name="STM32F103_HAL_Skeleton.elf (Release)" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F103_HAL_Skeleton" TARGET_NAME="STM32F103_HAL_Skeleton.elf" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="STM32F103_HAL_Skeleton" RUN_TARGET_NAME="STM32F103_HAL_Skeleton.elf">
+    <configuration name="Arm GDB 3333" type="CLion_Remote" factoryName="GDB Remote Debug" singleton="true" debugger="D:/GNU/ARM/bin/arm-none-eabi-gdb.exe" remoteCommand="localhost:3333" symbolFile="$PROJECT_DIR$/cmake-build-debug/STM32F103_HAL_Skeleton.elf" sysroot="" />
+    <configuration name="STM32F103_HAL_Skeleton.elf (Release)" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F103_HAL_Skeleton" TARGET_NAME="STM32F103_HAL_Skeleton.elf" CONFIG_NAME="Release">
       <envs />
+      <method>
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="false" />
+      </method>
     </configuration>
-    <configuration name="STM32F103_HAL_Skeleton.elf (debug)" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F103_HAL_Skeleton" TARGET_NAME="STM32F103_HAL_Skeleton.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="STM32F103_HAL_Skeleton" RUN_TARGET_NAME="STM32F103_HAL_Skeleton.elf">
+    <configuration name="STM32F103_HAL_Skeleton.elf (debug)" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F103_HAL_Skeleton" TARGET_NAME="STM32F103_HAL_Skeleton.elf" CONFIG_NAME="Debug">
       <envs />
+      <method>
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="false" />
+      </method>
     </configuration>
     <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" debugger="D:/GNU/ARM/bin/arm-none-eabi-gdb.exe" remoteCommand="localhost:1333" symbolFile="$PROJECT_DIR$/cmake-build-debug/STM32F103_HAL_Skeleton.elf" sysroot="" />
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="GDB Remote Debug.Arm GDB 3333" />
-      <item index="1" class="java.lang.String" itemvalue="Application.STM32F103_HAL_Skeleton.elf (debug)" />
-      <item index="2" class="java.lang.String" itemvalue="Application.STM32F103_HAL_Skeleton.elf (Release)" />
+      <item index="0" class="java.lang.String" itemvalue="Application.STM32F103_HAL_Skeleton.elf (debug)" />
+      <item index="1" class="java.lang.String" itemvalue="Application.STM32F103_HAL_Skeleton.elf (Release)" />
+      <item index="2" class="java.lang.String" itemvalue="GDB Remote Debug.Arm GDB 3333" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -194,11 +222,13 @@
       <workItem from="1506558548659" duration="1543000" />
       <workItem from="1506638799196" duration="143000" />
       <workItem from="1506639307384" duration="7317000" />
+      <workItem from="1506727926825" duration="3648000" />
+      <workItem from="1506732702409" duration="6047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19165000" />
+    <option name="totallyTimeSpent" value="28860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -211,18 +241,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.48933902" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5127932" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27292112" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2793177" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25692964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.48720682" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -230,6 +261,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -247,7 +279,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CLion_Remote">
@@ -260,7 +292,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -268,7 +299,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -284,7 +314,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="136">
             <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -350,7 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="80" lean-forward="true" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -358,7 +386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -366,7 +393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -374,7 +400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -382,7 +407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="74" lean-forward="true" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -390,7 +414,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -398,7 +421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1411">
           <caret line="83" column="10" lean-forward="false" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -406,7 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -414,7 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="74" column="95" lean-forward="false" selection-start-line="74" selection-start-column="89" selection-end-line="74" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -422,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="131" column="26" lean-forward="false" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -430,13 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-22078">
           <caret line="340" column="23" lean-forward="false" selection-start-line="340" selection-start-column="23" selection-end-line="340" selection-end-column="23" />
-          <folding>
-            <marker date="1506132594084" expanded="true" signature="12460:12481" ph="..." />
-            <marker date="1506132594084" expanded="true" signature="12513:12564" ph="..." />
-            <marker date="1506132594084" expanded="true" signature="12600:12655" ph="..." />
-            <marker date="1506132594084" expanded="true" signature="16366:16799" ph="..." />
-            <marker date="1506132594084" expanded="true" signature="22345:31033" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -444,7 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3111">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -452,7 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -460,7 +470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
           <caret line="48" column="62" lean-forward="true" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -468,7 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -477,7 +485,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -485,8 +492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Src/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="168" column="16" lean-forward="true" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
+        <state relative-caret-position="177">
+          <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding />
         </state>
       </provider>

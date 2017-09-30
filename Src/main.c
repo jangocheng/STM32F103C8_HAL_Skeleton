@@ -109,11 +109,11 @@ int main(void) {
 
         static u_int8_t toggleCounter = 0;
 
-        for (int32_t x = 0; x < 100000; x++) {
+        for (int32_t x = 0; x < 200000; x++) {
             // do nothing loop
         }
 
-        if (toggleCounter++ % 8) {
+        if (toggleCounter++ % 4) {
             HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
         }
     }
