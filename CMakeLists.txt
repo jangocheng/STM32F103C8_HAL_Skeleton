@@ -47,6 +47,9 @@ add_executable(${PROJECT_NAME}.elf ${USER_SOURCES})
 target_link_libraries(${PROJECT_NAME}.elf  HAL ${CMSIS})
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINK_FLAGS "-T ${LINKER_SCRIPT}")
 
+# Add source paths to library source code for lookup during development
+target_include_directories(${PROJECT_NAME}.elf PRIVATE Drivers/STM32F1xx_HAL_Driver/Src)
+
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map")
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)
