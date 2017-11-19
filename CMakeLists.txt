@@ -31,10 +31,10 @@ file(GLOB_RECURSE HAL_SOURCES "Drivers/STM32F1xx_HAL_Driver/Src/*.c")
 #endforeach()
 
 file(GLOB_RECURSE MIDDLEWARE_SOURCES "Middlewares/ST/**/*.c")
-message("* * * * * MIDDLEWARE_SOURCES:")
-foreach(src ${MIDDLEWARE_SOURCES})
-    message(${src})
-endforeach()
+#message("* * * * * MIDDLEWARE_SOURCES:")
+#foreach(src ${MIDDLEWARE_SOURCES})
+#    message(${src})
+#endforeach()
 
 include_directories(Inc)
 include_directories(Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc)
@@ -44,9 +44,9 @@ include_directories(Drivers/STM32F1xx_HAL_Driver/Inc/Legacy)
 include_directories(Drivers/CMSIS/Device/ST/STM32F1xx/Include)
 include_directories(Drivers/CMSIS/Include)
 
-find_library(CMSIS arm_cortexM3l_math
-        ${CMSIS_LIBRARY_PATH}
-        NO_DEFAULT_PATH)
+#find_library(CMSIS arm_cortexM3l_math
+#        ${CMSIS_LIBRARY_PATH}
+#        NO_DEFAULT_PATH)
 message("*** IMPORTANT *** CMSIS Library: ${CMSIS}")
 
 add_library(HAL ${HAL_SOURCES})
@@ -55,6 +55,12 @@ add_library(MIDDLEWARE ${MIDDLEWARE_SOURCES})
 add_executable(${PROJECT_NAME}.elf ${USER_SOURCES})
 target_link_libraries(${PROJECT_NAME}.elf MIDDLEWARE HAL ${CMSIS})
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINK_FLAGS "-T ${LINKER_SCRIPT}")
+
+# Add source paths to library source code for lookup during development
+target_include_directories(${PROJECT_NAME}.elf PRIVATE
+        Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src
+        Middlewares/ST/STM32_USB_Device_Library/Core/Src
+        Drivers/STM32F1xx_HAL_Driver/Src)
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map")
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
