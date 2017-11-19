@@ -1,7 +1,8 @@
 /**
   ******************************************************************************
-  * File Name          : main.hpp
-  * Description        : This file contains the common defines of the application
+  * @file           : usbd_conf.h
+  * @version        : v2.0_Cube
+  * @brief          : Header for usbd_conf file.
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -44,39 +45,138 @@
   * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   *
   ******************************************************************************
-  */
+*/
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MAIN_H
-#define __MAIN_H
-  /* Includes ------------------------------------------------------------------*/
-
-/* Includes ------------------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-
-/* USER CODE END Includes */
-
-/* Private define ------------------------------------------------------------*/
-
-/* ########################## Assert Selection ############################## */
-/**
-  * @brief Uncomment the line below to expanse the "assert_param" macro in the 
-  *        HAL drivers code
-  */
-/* #define USE_FULL_ASSERT    1U */
-
-/* USER CODE BEGIN Private defines */
-
-/* USER CODE END Private defines */
-
+#ifndef __USBD_CONF__H__
+#define __USBD_CONF__H__
 #ifdef __cplusplus
  extern "C" {
 #endif
-void _Error_Handler(char *, int);
+/* Includes ------------------------------------------------------------------*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "stm32f1xx.h"
+#include "stm32f1xx_hal.h"
+#include "usbd_def.h"
 
-#define Error_Handler() _Error_Handler(__FILE__, __LINE__)
+/** @addtogroup USBD_OTG_DRIVER
+  * @{
+  */
+  
+/** @defgroup USBD_CONF
+  * @brief usb otg low level driver configuration file
+  * @{
+  */ 
+
+/** @defgroup USBD_CONF_Exported_Defines
+  * @{
+  */ 
+
+/*---------- -----------*/
+#define USBD_MAX_NUM_INTERFACES     1
+/*---------- -----------*/
+#define USBD_MAX_NUM_CONFIGURATION     1
+/*---------- -----------*/
+#define USBD_MAX_STR_DESC_SIZ     512
+/*---------- -----------*/
+#define USBD_SUPPORT_USER_STRING     0
+/*---------- -----------*/
+#define USBD_DEBUG_LEVEL     0
+/*---------- -----------*/
+#define USBD_SELF_POWERED     1
+/*---------- -----------*/
+#define MAX_STATIC_ALLOC_SIZE     512
+/****************************************/
+/* #define for FS and HS identification */
+#define DEVICE_FS 		0
+
+/** @defgroup USBD_Exported_Macros
+  * @{
+  */ 
+
+/* Memory management macros */  
+#define USBD_malloc               (uint32_t *)USBD_static_malloc
+#define USBD_free                 USBD_static_free
+#define USBD_memset               /* Not used */
+#define USBD_memcpy               /* Not used */
+
+#define USBD_Delay   HAL_Delay
+
+/* For footprint reasons and since only one allocation is handled in the HID class
+   driver, the malloc/free is changed into a static allocation method */
+void *USBD_static_malloc(uint32_t size);
+void USBD_static_free(void *p);    
+
+/* DEBUG macros */    
+#if (USBD_DEBUG_LEVEL > 0)
+#define  USBD_UsrLog(...)   printf(__VA_ARGS__);\
+                            printf("\n");
+#else
+#define USBD_UsrLog(...)   
+#endif 
+                            
+                            
+#if (USBD_DEBUG_LEVEL > 1)
+
+#define  USBD_ErrLog(...)   printf("ERROR: ") ;\
+                            printf(__VA_ARGS__);\
+                            printf("\n");
+#else
+#define USBD_ErrLog(...)   
+#endif 
+                            
+                            
+#if (USBD_DEBUG_LEVEL > 2)                         
+#define  USBD_DbgLog(...)   printf("DEBUG : ") ;\
+                            printf(__VA_ARGS__);\
+                            printf("\n");
+#else
+#define USBD_DbgLog(...)                         
+#endif
+                            
+/**
+  * @}
+  */ 
+ 
+    
+    
+/**
+  * @}
+  */ 
+
+/** @defgroup USBD_CONF_Exported_Types
+  * @{
+  */ 
+/**
+  * @}
+  */ 
+
+/** @defgroup USBD_CONF_Exported_Macros
+  * @{
+  */ 
+/**
+  * @}
+  */ 
+
+/** @defgroup USBD_CONF_Exported_Variables
+  * @{
+  */ 
+/**
+  * @}
+  */ 
+
+/** @defgroup USBD_CONF_Exported_FunctionsPrototype
+  * @{
+  */ 
+/**
+  * @}
+  */ 
 #ifdef __cplusplus
 }
 #endif
+
+#endif /*__USBD_CONF__H__*/
 
 /**
   * @}
@@ -84,7 +184,6 @@ void _Error_Handler(char *, int);
 
 /**
   * @}
-*/ 
-
-#endif /* __MAIN_H */
+  */ 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
